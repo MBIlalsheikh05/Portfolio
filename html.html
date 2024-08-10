@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Bilal Sheikh | Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 1px;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        nav {
+            margin-top: 5px;
+            animation: slideInRight 1s ease-out;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffbb33;
+            transform: scale(1.1);
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            transform: translateY(10px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ffbb33;
+            padding-bottom: 5px;
+            position: relative;
+            animation: zoomIn 0.8s ease-in-out;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 50px;
+            height: 3px;
+            background-color: #ffbb33;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        section p {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .projects, .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .projects div, .skills div {
+            padding: 10px;
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            color: white;
+            text-align: center;
+            position: relative;
+            font-size: 0.9em;
+        }
+
+        .projects div:hover, .skills div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(255, 187, 51, 0.5);
+            background: linear-gradient(45deg, #ffbb33, #ff8800);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            color: white;
+            margin-top: 15px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Muhammad Bilal Sheikh</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio! I am a passionate developer with experience in various web technologies, and I'm always eager to learn and improve. Here, you'll find a selection of my projects, the skills I've acquired, and ways to connect with me. Feel free to explore and reach out if you have any questions!</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div>
+                <h3>MCQ-Software Application</h3>
+                <p>A comprehensive MCQ software that enables users to take quizzes and view results, while providing admins with tools to manage questions and users efficiently. The platform features dynamic question management, user authentication, and a sleek, responsive design.</p>
+            </div>
+            <div>
+                <h3>Sneakers E-Commerce Website</h3>
+                <p>A sleek, responsive e-commerce website designed for selling sneakers, featuring dedicated sections for men's and women's footwear, a streamlined checkout process, and a user-friendly interface. The site offers an engaging shopping experience with visually appealing design and easy navigation.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div>
+                <h3>Frontend</h3>
+                <p>C++, JavaScript, React.js, Python, Java, HTML, CSS</p>
+            </div>
+            <div>
+                <h3>Backend</h3>
+                <p>Node.js, Express.js, MongoDB</p>
+            </div>
+            <!-- Add more skills as needed -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out to me via email at <a href="https://github.com/MBIlalsheikh05" style="color: #ffbb33;">Github</a> linkedin <a href="https://www.linkedin.com/in/m-bilal-sheikh-b113a5233/" style="color: #ffbb33;">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p> Thanks For Visiting My Portfolio.</p>
+    </footer>
+
+</body>
+</html>
